@@ -566,5 +566,3 @@ The art of regularization lies in finding the sweet spot: sufficient capacity to
 - Belkin, M., et al. (2019). Reconciling modern machine learning practice and the classical bias-variance trade-off. *PNAS*.
 
 ---
-
-**Next Lecture**: Convolutional Neural Networks (CNNs)
