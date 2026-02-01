@@ -119,7 +119,3 @@ Expected outputs: MSE/MAE metrics, loss curves, predictions vs actuals plot
 - Dropout layers prevent overfitting
 - StandardScaler applied to all features
 - Models trained with early stopping to prevent overfitting
-
-## License
-
-MIT
