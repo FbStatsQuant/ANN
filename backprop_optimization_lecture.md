@@ -176,11 +176,12 @@ where $\beta \in [0, 1)$ (typically 0.9) controls the decay.
 ### Nesterov Momentum
 
 A variant that "looks ahead":
+
 $$
-\begin{align}
-v^{(t+1)} &= \beta v^{(t)} + \nabla_\theta \mathcal{L}_{\mathcal{B}_t}(\theta^{(t)} - \eta \beta v^{(t)}) \\
+\begin{aligned}
+v^{(t+1)} &= \beta v^{(t)} + \nabla_{\theta} \mathcal{L}_{\mathcal{B}_t}(\theta^{(t)} - \eta \beta v^{(t)}) \\
 \theta^{(t+1)} &= \theta^{(t)} - \eta v^{(t+1)}
-\end{align}
+\end{aligned}
 $$
 
 Evaluates the gradient at a predicted future position, often providing faster convergence.
@@ -207,11 +208,12 @@ where $g^{(t)} = \nabla_\theta \mathcal{L}_{\mathcal{B}_t}(\theta^{(t)})$ and $G
 ### RMSProp
 
 Fixes AdaGrad's aggressive decay via exponential moving average:
+
 $$
-\begin{align}
+\begin{aligned}
 G^{(t+1)} &= \gamma G^{(t)} + (1-\gamma)(g^{(t)})^2 \\
-\theta^{(t+1)} &= \theta^{(t)} - \frac{\eta}{\sqrt{G^{(t+1)} + \epsilon}} \odot g^{(t)}
-\end{align}
+\theta^{(t+1)} &= \theta^{(t)} - \frac{\eta}{\sqrt{G^{(t+1)} + \epsilon}} \circ g^{(t)}
+\end{aligned}
 $$
 
 with $\gamma \approx 0.9$. Discounts old gradients, maintaining adaptivity throughout training.
@@ -361,7 +363,8 @@ where $\gamma, \beta$ are learnable scale and shift parameters.
 ### Inference
 
 At test time, use population statistics computed during training:
-$$\hat{z}_i^{(\ell)} = \frac{z_i^{(\ell)} - \mu_{\text{pop}}}{\sqrt{\sigma_{\text{pop}}^2 + \epsilon}}$$
+
+$$\hat{z}_i^{(\ell)} = \frac{z_i^{(\ell)} - \mu_{pop}}{\sqrt{\sigma_{pop}^2 + \epsilon}}$$
 
 ---
 
