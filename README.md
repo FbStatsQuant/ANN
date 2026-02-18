@@ -1,6 +1,6 @@
 # Artificial Neural Network Examples
 
-Two complete implementations of ANNs for supervised learning tasks using TensorFlow/Keras.
+Three complete implementations of ANNs for supervised learning tasks using TensorFlow/Keras.
 
 ## Contents
 
