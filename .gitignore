@@ -20,3 +20,6 @@ wandb/
 Thumbs.db
 .vscode/
 .idea/
+
+# Heavy datasets: kept only on the local computer, see datasets/*/README.md
+datasets/chicago_food_inspections/food_inspections.csv

@@ -1,13 +1,11 @@
-# Chicago Food Inspections (not committed, 340 MB)
+# Chicago Food Inspections
+
+**The data file is NOT in this repo (345 MB). It lives only on the local computer** at
+`datasets/chicago_food_inspections/food_inspections.csv` and is gitignored. If you cloned this repo elsewhere, download it first:
+
+    curl -L 'https://data.cityofchicago.org/resource/4ijn-s7e5.csv?$limit=500000' -o food_inspections.csv
 
 - Source: https://data.cityofchicago.org/Health-Human-Services/Food-Inspections/4ijn-s7e5
-- Binary target: collapse `Results` into Pass (Pass, Pass w/ Conditions) vs. Fail.
-- The `Violations` column is long free text, which is why the file is so large. Drop it or select columns to shrink it.
+- Binary target: collapse `results` into Pass (Pass, Pass w/ Conditions) vs. Fail.
+- The `violations` column is long free text and is why the file is so large.
 
-Download:
-
-    curl -L "https://data.cityofchicago.org/resource/4ijn-s7e5.csv?\$limit=300000" -o food_inspections.csv
-
-Smaller version without the text column:
-
-    curl -L "https://data.cityofchicago.org/resource/4ijn-s7e5.csv?\$limit=300000&\$select=inspection_id,dba_name,facility_type,risk,zip,inspection_date,inspection_type,results,latitude,longitude" -o food_inspections.csv
