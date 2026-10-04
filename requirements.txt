@@ -1,0 +1,6 @@
+torch>=2.6
+torchvision>=0.21
+numpy
+matplotlib
+tqdm
+tensorboard
