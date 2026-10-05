@@ -1,13 +1,13 @@
 # Datasets
 
-| Dataset | Tasks | Size | In repo? |
+| Folder | Task | Size | On GitHub? |
 |---|---|---|---|
-| [chicago_crimes](chicago_crimes/) | binary (arrest), multiclass (crime type), regression (daily counts) | 264k rows | yes (gzipped) |
-| [bank_marketing](bank_marketing/) | binary (term deposit subscription) | 41k rows | yes |
-| [wine_quality](wine_quality/) | regression (quality score), multiclass (quality bins) | 6.5k rows | yes |
-| [chicago_food_inspections](chicago_food_inspections/) | binary (pass/fail) | 317k rows, 345 MB | no (local only, gitignored), see README |
-| [covertype](covertype/) | multiclass (7 forest cover types) | 581k rows | yes (11 MB gz) |
+| [bank_marketing](bank_marketing/) | binary | 41k rows | yes |
+| [credit_card_default](credit_card_default/) | binary | 30k rows | yes |
+| [bike_sharing](bike_sharing/) | regression | 17k rows (hourly) | yes |
+| [chicago_taxi](chicago_taxi/) | regression | 433k rows, 147 MB | no, local only |
+| [dry_bean](dry_bean/) | multiclass | 13.6k rows | yes |
+| [chicago_311](chicago_311/) | multiclass | 261k rows, 59 MB | no, local only |
 
-Every folder holds the real data on the local computer. Files over ~50 MB (food inspections) are gitignored, so GitHub only has a README with the download command.
-
-
+All data lives on the local computer. The two Chicago files are too heavy for GitHub and are gitignored;
+`fetch_chicago.py` rebuilds them (see each folder's README).

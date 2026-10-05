@@ -22,4 +22,5 @@ Thumbs.db
 .idea/
 
 # Heavy datasets: kept only on the local computer, see datasets/*/README.md
-datasets/chicago_food_inspections/food_inspections.csv
+datasets/chicago_taxi/*.csv
+datasets/chicago_311/*.csv
